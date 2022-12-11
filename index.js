@@ -122,8 +122,8 @@ io.on("connection", async (socket) => {
 })
 
 app.post("/send-message", async (req, res) => {
-  const message = req.body.data.message
-  const number = req.body.data.number
+  const message = req.body.message
+  const number = req.body.number
 
   if (connected) {
     wa.onWhatsApp(number)
