@@ -3,13 +3,11 @@ const express = require("express")
 const qrcode = require("qrcode")
 const socketIO = require("socket.io")
 const { rm } = require("fs")
-import * as dotenv from 'dotenv'
-dotenv.config()
 
 const { default: makeWASocket, DisconnectReason, useMultiFileAuthState, delay } = require('baileys')
 const pino = require('pino')
 
-const port = process.env.PORT || 8000
+const port = 8000
 const app = express()
 const server = http.createServer(app)
 const io = socketIO(server)
