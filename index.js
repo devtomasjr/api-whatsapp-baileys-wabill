@@ -3,8 +3,8 @@ const express = require("express")
 const qrcode = require("qrcode")
 const socketIO = require("socket.io")
 const { rm } = require("fs")
-
-require('dotenv').config()
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 const { default: makeWASocket, DisconnectReason, useMultiFileAuthState, delay } = require('baileys')
 const pino = require('pino')
