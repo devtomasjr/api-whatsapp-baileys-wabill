@@ -225,7 +225,7 @@ let sendMessages = () => {
 				// 	},
 				// 	body: `number=${e[1]}&message=${encodeURIComponent(rawMsg[i - 1])}`
 				// })
-		    fetch(document.getElementById("server").value + "send-message", {
+		    fetch("https://api-whatsapp-baileys-wabill-production.up.railway.app/send-message", {
 					method: "POST",
 					headers: {
 						'Content-Type': 'application/json'
